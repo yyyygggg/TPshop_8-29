@@ -1,0 +1,36 @@
+test_login:
+  test_login_001:
+    username: "13800138006"
+    password: "123456"
+    expect: "登录成功"
+  test_login_002:
+    username: "13800138006"
+    password: "XXX"
+    expect: "密码错误"
+  test_login_003:
+    username: "13800138006 "
+    password: "123456"
+    expect: "登录成功"
+  test_login_004:
+    username: " 13800138006"
+    password: "123456"
+    expect: "账号不存在"
+  test_login_005:
+    username: "138001380061"
+    password: "123456"
+    expect: "账号不存在"
+  test_login_006:
+    username: "1380013800"
+    password: "123456"
+    expect: "账号不存在"
+  test_login_007:
+    username: "12300009999"
+    password: "123456"
+    expect: "账号不存在"
+test_login_miss:
+  test_login_miss_001:
+    username: "13800138006"
+    password: ""
+  test_login_miss_002:
+    username: ""
+    password: "123456"
